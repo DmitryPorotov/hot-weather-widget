@@ -1,0 +1,17 @@
+<div class="temperatur">
+  <div *ngIf="weather$ | async as weather; else loadingSpinner">
+    <h5>{{weather.title}}</h5>
+    <span class="w-line"> </span>
+    <span [class]="weather.icon"> </span>
+    <h2>{{weather.air_temperature}}<sup class="degree">°</sup></h2>
+    <h6>Water {{weather.water_temperature}}<sup class="degree">°</sup></h6>
+  </div>
+</div>
+
+<ng-template #loadingSpinner>
+  <div class="spinner-container">
+    <svg>
+      <use xlink:href="#loadingSpinner"></use>
+    </svg>
+  </div>
+</ng-template>
