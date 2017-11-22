@@ -7,6 +7,8 @@ import { ActivitiesComponent } from './activities/activities.component';
 import { WeatherComponent } from './weather/weather.component';
 import { SocialInfoComponent } from './social-info/social-info.component';
 import { PhoneFormatterPipe } from './common/pipes/phone-formatter.pipe';
+import { ResortCardComponent } from './activities/resort-card/resort-card.component';
+import { ResortFilterPipe } from './common/pipes/resort-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { PhoneFormatterPipe } from './common/pipes/phone-formatter.pipe';
     ActivitiesComponent,
     PhoneFormatterPipe,
     WeatherComponent,
-    SocialInfoComponent
+    SocialInfoComponent,
+    ResortCardComponent,
+    ResortFilterPipe
   ],
   imports: [
     BrowserModule

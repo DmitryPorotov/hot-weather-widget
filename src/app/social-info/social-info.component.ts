@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { socInfo$ } from '../services/mock_data_srv';
-import { Observable } from 'rxjs/Observable';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-social-info',
@@ -8,14 +6,14 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./social-info.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class SocialInfoComponent implements OnInit {
+export class SocialInfoComponent {
 
-  public socInfo$: Observable<SocialInfo>;
+  @Input()
+  public socInfo: SocialInfo;
+
+  @Input()
+  public title: string;
 
   public constructor() { }
-
-  public ngOnInit(): void {
-    this.socInfo$ = socInfo$;
-  }
 
 }

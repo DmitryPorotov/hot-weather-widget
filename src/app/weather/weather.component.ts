@@ -1,6 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { weather$ } from '../services/mock_data_srv';
-import { Observable } from 'rxjs/Observable';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-weather',
@@ -10,12 +8,15 @@ import { Observable } from 'rxjs/Observable';
 })
 export class WeatherComponent implements OnInit {
 
-  public weather$: Observable<Weather>;
+  @Input()
+  public weather: Weather;
+
+  @Input()
+  public title: string;
 
   public constructor() { }
 
   public ngOnInit(): void {
-    this.weather$ = weather$;
   }
 
 }

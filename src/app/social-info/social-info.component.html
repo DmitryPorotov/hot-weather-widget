@@ -1,7 +1,6 @@
 <div class="teddy-bear">
-  <div *ngIf="socInfo$ | async as socInfo; else loadingSpinner">
     <div class="teddy-text">
-      <h4>{{ socInfo.title }}</h4>
+      <h4>{{ title }}</h4>
       <span class="w-line"> </span>
       <img [src]='"../assets/images/" + socInfo.img' alt="" class="img-responsive">
     </div>
@@ -15,13 +14,4 @@
         </li>
       </ul>
     </div>
-  </div>
 </div>
-
-<ng-template #loadingSpinner>
-  <div class="spinner-container">
-    <svg>
-      <use xlink:href="#loadingSpinner"></use>
-    </svg>
-  </div>
-</ng-template>

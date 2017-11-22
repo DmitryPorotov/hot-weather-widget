@@ -309,13 +309,17 @@ i.text-info{
 }
 
 #loadingSpinner circle {
-    fill: rgba(100,100,255,0.9);
+    fill: rgba(100,100,100,0.9);
 }
 
 .teddy-bear {
     min-height: 90px;
     background: #fd7b87;
     border-radius: 5px;
+}
+
+.ele-strip .active {
+    color: rgb(50,50,50);
 }
 
 /*--meadia quries start here--*/
